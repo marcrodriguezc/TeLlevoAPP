@@ -23,8 +23,11 @@ ionic cordova build android
 ````
 
 ````
-APK Sin firmar => https://github.com/marcrodriguezc/TeLlevoAPP/blob/master/resources/app-release-unsigned.apk
+APK Sin firmar  ⇩
+````  
+https://github.com/marcrodriguezc/TeLlevoAPP/blob/master/resources/app-release-unsigned.apk
+
 ````
+APK Firmada  ⇩ 
 ````
-APK Firmada => https://github.com/marcrodriguezc/TeLlevoAPP/blob/master/resources/app-release.apk
-````
+https://github.com/marcrodriguezc/TeLlevoAPP/blob/master/resources/app-release.apk

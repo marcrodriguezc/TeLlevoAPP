@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar class="background">
+    <ion-buttons slot="end" (click)="logout()">
+      <ion-icon name="log-out-outline" [routerLink]="['/home']" class="logout"></ion-icon>
+    </ion-buttons>
+    <ion-title>TeLlevoAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <strong>
+    <div class="user">{{username.username}}
+      <div class="car">
+        <div *ngIf="username.car===false">
+          Pasajero
+        </div>
+        <div *ngIf="username.car===true">
+          Conductor
+        </div>
+      </div>
+    </div>
+  </strong>
+  <ion-item class="city">
+    <ion-label>Ciudad Origen</ion-label>
+    <ion-select [(ngModel)]="origen" (ionChange)="getConductor()">
+      <ion-select-option *ngFor="let ciudad of ciudades" [value]="ciudad.name">{{ciudad.name}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item class="city">
+    <ion-label>Ciudad Destino</ion-label>
+    <ion-select [(ngModel)]="destino">
+      <ion-select-option *ngFor="let destino of destinos" [value]="destino.name">{{destino.name}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item class="cant">
+    <ion-label>Pasajeros</ion-label>
+    <ion-select [(ngModel)]="cantPasa">
+      <ion-select-option *ngFor="let cantPasa of pasajeros">{{cantPasa.cant}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item class="cond">
+    <ion-label>Conductores</ion-label>
+    <ion-select [(ngModel)]="chofer">
+      <ion-select-option *ngFor="let conductor of conductores" [value]="conductor.name">{{conductor.name}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+ 
+  <br>
+  <div>
+    <p>Viaje:  {{origen}} - {{destino}}</p>
+  </div>
+  <br>
+  <br>
+  <div>
+    <p>Chofer: {{chofer}}</p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div>
+    <ion-button class="calcViaje" (click)="calcViaje()">Calcular Viaje</ion-button>
+  </div>
+  <div>
+    <strong>Total: {{p}}</strong>
+  </div>
+  <div>
+    <strong>Por persona: {{r}}</strong>
+  </div>
+  <app-geocoder></app-geocoder>
+</ion-content>
+<app-footer></app-footer>

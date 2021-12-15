@@ -1,0 +1,30 @@
+.image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  font-size: 1.25rem;
+}
+
+#container{
+  padding-top: 1000;
+  display: flex;
+  justify-content: center;
+  
+}
+.hiper{
+  padding-top: 10000;
+  color: #fff;
+  text-decoration:none;
+  font-size: 1.25rem;
+}
+.crea{
+  font-size: 1.40rem;
+  padding-bottom: 1rem;
+}
+
+.background{
+  --background: #0267b1;
+}
